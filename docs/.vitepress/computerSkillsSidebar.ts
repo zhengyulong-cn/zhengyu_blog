@@ -35,11 +35,11 @@ const computerSkillsSidebar = [
     collapsed: true,
     items: [
       {
-        text: 'JavaScript基础入门',
+        text: 'JavaScript编程语言-上',
         link: '/computer-skills/现代JavaScript/JavaScript编程语言-上',
       },
       {
-        text: 'JavaScript基础入门',
+        text: 'JavaScript编程语言-下',
         link: '/computer-skills/现代JavaScript/JavaScript编程语言-下',
       },
       {
@@ -49,6 +49,42 @@ const computerSkillsSidebar = [
       {
         text: '浏览器事件使用汇总',
         link: '/computer-skills/现代JavaScript/浏览器事件使用汇总',
+      },
+      {
+        text: 'JS作用域和作用域链',
+        link: '/computer-skills/现代JavaScript/JS作用域和作用域链',
+      },
+      {
+        text: 'fetch的使用',
+        link: '/computer-skills/现代JavaScript/fetch的使用',
+      },
+      {
+        text: 'DOM的使用',
+        link: '/computer-skills/现代JavaScript/DOM的使用',
+      },
+      {
+        text: 'Promise的使用',
+        link: '/computer-skills/现代JavaScript/Promise的使用',
+      },
+      {
+        text: 'JS实用工具函数',
+        link: '/computer-skills/现代JavaScript/JS实用工具函数',
+      },
+      {
+        text: '正则表达式入门',
+        link: '/computer-skills/现代JavaScript/正则表达式入门',
+      },
+      {
+        text: '正则表达式入门',
+        link: '/computer-skills/现代JavaScript/正则表达式入门',
+      },
+      {
+        text: '深入理解JS事件循环机制',
+        link: '/computer-skills/现代JavaScript/深入理解JS事件循环机制',
+      },
+      {
+        text: '深入理解JS原型链机制',
+        link: '/computer-skills/现代JavaScript/深入理解JS原型链机制',
       },
     ]
   },
