@@ -1,227 +1,127 @@
-# CSS尺寸体系
+<script setup>
+import DisplayElementPanel from './DisplayElementPanel.vue'
+import WidthDimensionPanel from './WidthDimensionPanel.vue'
+</script>
+
+# CSS 尺寸体系
 
 ## 块级元素和行内元素
 
-块级元素block：（div、h1、p）
+### 区别
 
-1. 每个块级元素独占一行
-2. width、height、line-height、margin、padding都有效
-3. 如果不设置width，默认为父元素的100%
-4. 多个块元素写一起上下排列
+|            | block                                  | inline                                                                                           | inline-block                                    |
+| ---------- | -------------------------------------- | ------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| 标签       | div、h1、p                             | span、a、i                                                                             | button、input、img                              |
+| 独占一行   | 每个块级元素独占一行                   | 不独占一行                                                                                       | 不独占一行                                      |
+| 尺寸属性   | `width`、`height`、`line-height`、`margin`、`padding` 都生效 | `width`、`height` 无效；`margin`、`padding` 水平方向有效，垂直方向无效；`line-height` 有效 | `width`、`height`、`line-height`、`margin`、`padding` 都生效 |
+| 宽度       | 默认为 `auto`，填充满父容器宽度，可设置 `width`。 | `width` 无效，由内容决定。                                                                       | 默认由内容收缩包裹，但可设置 `width`。           |
+| 高度 | 由内容撑开，但可以设置 `height`。 | 由内容撑开，`height` 无效。 | 由内容撑开，但可以设置 `height`。 |
+| 排列 | 多个块级元素上下排列 | 水平排列，直到行末换行。多个 `span` 换行编写有间隙。 | 水平排列，放不下就折行。 |
 
-行内元素inline：（a、i、span、textarea、em）
+### 元素排列
 
-1. 不独占一行
-2. width、height无效；margin、padding水平方向有效，垂直方向无效；line-height有效
-3. 元素宽度就是包含的文字或图片的宽度，不可改变
-4. 行内元素中不能放块级元素
+<DisplayElementPanel />
 
-行内块级元素inline-block：（button、input、img）
+1.多个 block
 
-1. 不独占一行
-2. width、height、line-height、margin、padding都有效
-3. 默认宽度即本身内容的宽度
-4. 需要在父元素设置`font-size: 0;`才能消除间隙
+垂直排列：
 
-在本节提到块级和行内元素，最主要的是宽度，**inline默认宽度为内容宽度，block宽度默认为父元素的100%**。
+- 每个 `block` 独占一行，和宽度无关。
+- 上下相邻的 `block` 会发生 `margin` 合并：
+  - 两个正或两个负 `margin` 取绝对值的最大值
+  - 一正一负则相加
 
-## 尺寸状态
+折行：块级元素不会折行，因为每个块本身就是一行
 
-1. 充分利用可用空间。`<div>`、`<p>`等元素的宽度默认是父容器的100%，这就是充分利用可用空间。（fill-available）
-2. 收缩到合适。浮动、绝对定位、行内水平元素，收缩到内容合适的宽度。（fit-content）
-3. 收缩到最小。当空间不够时候，文字能断就断，中文是随便断的，英文单词不能断。（min-content）
+2.多个 inline
 
-下图的第一列，就是收缩到最小的状态。
+水平排列：从左往右依次排列。
 
-![收缩到最小](./images/收缩到最小.png)
+折行：一行放不下时，整个 inline 元素折到下一行。
 
-4. 超出容器限制。连续特别长的英文数字，或者内联元素设置了`white-space:nowrap;`，则会超出容器。
+高度：所有 inline 元素共同撑起行盒，行盒高度由最高元素决定。没有 `margin` 重叠。
 
-![](./images/超出容器限制.png)
+3.多个 inline-block
 
-## width属性
+水平排列：从左往右依次排列。对外表现像 inline，对内表现像 block。
 
-### fill-available
+折行：一行放不下时，整个 inline-block 元素折到下一行。
 
-如果是block元素，默认宽度就是充分利用可用空间的；如果是inline-block元素，默认宽度由子元素宽度决定的，但可用通过`fill-available`让元素的100%自动填充特性可以应用在行内块元素。
+### 一些问题
 
-```vue
-<template>
-  <div class="appBox">
-    <div class="box box1">
-      <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg" alt="" />
-      <div>
-        第1次，第2次，第3次
-      </div>
-    </div>
-    <div class="box box2">
-      <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg" alt="" />
-      <div>
-        第1次，第2次，第3次
-      </div>
-    </div>
-  </div>
-</template>
+#### 问题：inline 及 inline-block 的换行符间隙
 
-<style scoped lang="less">
-.appBox {
-  width: 500px;
-  padding: 10px;
-  background: lightblue;
-  resize: horizontal;
-  overflow: hidden;
-  .box {
-    width: 100%;
-    border: 1px solid black;
-  }
-  .box1 {
-    display: inline-block;
-    width: auto;
-  }
-  .box2 {
-    display: inline-block;
-    width: -webkit-fill-available;
-  }
-}
+```html
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
+<style>
+    .container {
+        /* 去除间隙 */
+        font-size: 0;
+    }
+    .item {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: lightcoral;
+        font-size: 16px;
+    }
 </style>
 ```
 
-![](./images/fill-available.png)
+#### 问题：多个 inline-block 水平居中
 
-当子元素宽度不够时候，可用观察到使用`fill-available`后会充分利用父元素的可用空间。
+`inline-block` 有行内元素特性，所以可以使用 `text-align: center;` 进行水平居中。
 
-### max-content
-
-采用宽度大的那个内容的宽度。
-
-```vue
-<template>
-  <div class="appBox">
-    <div class="box box1">
-      <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg" alt="" />
-      <div>
-        第1次，第2次，第3次，第4次，第5次，第6次，第7次，第8次，第9次，第10次，第11次，第12次
-      </div>
-    </div>
-    <div class="box box2">
-      <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg" alt="" />
-      <div>
-        第1次，第2次，第3次，第4次，第5次，第6次，第7次，第8次，第9次，第10次，第11次，第12次
-      </div>
-    </div>
-  </div>
-</template>
-
-<style scoped lang="less">
-.appBox {
-  width: 500px;
-  padding: 10px;
-  background: lightblue;
-  .box {
-    width: 100%;
-    border: 1px solid black;
-  }
-  .box1 {
-    display: inline-block;
-    width: 100%;
-  }
-  .box2 {
-    display: inline-block;
-    width: max-content;
-  }
-}
-</style>
+```css
+.parent { text-align: center; }
+.child { display: inline-block; }
 ```
 
-![](./images/max-content.png)
+## 尺寸计算模式
 
-### min-content
+1.内部尺寸
 
-内部元素**最小宽度值最大的那个元素的宽度**作为最终容器的宽度。
+场景：
 
-最小宽度值：
+- `display: inline` / `inline-block`（默认宽度为 `shrink-to-fit`）
+- `float: left/right`
+- `position: absolute` / `fixed`
+- `width: max-content` / `min-content` / `fit-content` 基于内容计算宽度尺寸
 
-- 图片：图片呈现的宽度
-- 文本
-  - 中文：一个中文的宽度值。最小宽度可能就是里面最长的英文单词的宽度。
-  - 包含英文：默认英文单词不换行。最小宽度可能就是里面最长的英文单词的宽度。
+特点：
 
-```vue
-<template>
-  <div class="appBox">
-    <div class="box box1">
-      <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg" alt="" />
-      <div>
-        第1次，第2次，第3次，第4次，第5次，第6次，第7次，第8次，第9次，第10次，第11次，第12次
-      </div>
-    </div>
-    <div class="box box2">
-      <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg" alt="" />
-      <div>
-        第1次，第2次，第3次，第4次，第5次，第6次，第7次，第8次，第9次，第10次，第11次，第12次
-      </div>
-    </div>
-  </div>
-</template>
+- 元素可能溢出父容器。设置 `white-space: nowrap`，则会溢出父容器。
 
-<style scoped lang="less">
-.appBox {
-  width: 500px;
-  padding: 10px;
-  background: lightblue;
-  .box {
-    width: 100%;
-    border: 1px solid black;
-  }
-  .box1 {
-    display: inline-block;
-    width: auto;
-  }
-  .box2 {
-    display: inline-block;
-    width: min-content;
-  }
-}
-</style>
-```
+2.外部尺寸
 
-![](./images/min-content.png)
+场景：
 
-我们可以观察到，使用`min-content`后，盒子宽度就是图片宽度了，文本被折行。
+- `width: auto` 默认填满父容器内容宽度
+- `width: 50%` 相对于父容器内容宽度
+- `width: stretch` 在父容器内充分利用可用空间
 
-### fit-content
+特点：
 
-收缩到合适，当子元素宽度都小于父元素时，收缩到合适宽度。
+- 尺寸由外部决定，内容可能被压缩或溢出
+- 元素不会主动溢出父容器
 
-比如我们可以通过配合`margin: 0 auto;`让其收缩到合适宽度同时居中显示。
+3.混合情况，外部容器和内容内容共同影响尺寸。
 
-```vue
-<template>
-  <div class="appBox">
-    <div class="box box1">
-      <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg" alt="" />
-      <div>
-        第1次，第2次，第3次，第4次，第5次，第6次
-      </div>
-    </div>
-  </div>
-</template>
+## width 属性
 
-<style scoped lang="less">
-.appBox {
-  width: 500px;
-  padding: 10px;
-  background: lightblue;
-  .box {
-    width: 100%;
-    border: 1px solid black;
-  }
-  .box1 {
-    margin: 0 auto;
-    width: fit-content;
-  }
-}
-</style>
-```
+<WidthDimensionPanel />
 
-![](./images/fit-content.png)
+| 属性               | 行为说明                                                     |
+| ------------------ | ------------------------------------------------------------ |
+| **auto**           | 块级元素默认，填满父容器可用空间                             |
+| **50%**            | 占父容器宽度的百分比                               |
+| **stretch** | 撑满容器可用空间，比 `width: 100%` 更智能处理 margin/padding |
+| **max-content**    | 连续特别长的英文数字，连续特别长的英文数字，或者内联元素设置了 `white-space:nowrap;`，则会超出容器。 |
+| **min-content**    | 收缩到最窄不可断元素宽度，中文逐字断行                       |
+| **fit-content**    | 收缩到内容合适宽度，等价于 `min(max-content, stretch)` |
+| **inherit**        | 继承父元素显式设置的 width 值                                |
+
