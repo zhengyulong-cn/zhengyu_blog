@@ -81,6 +81,72 @@ import WidthDimensionPanel from './WidthDimensionPanel.vue'
 .child { display: inline-block; }
 ```
 
+### BFC
+
+#### 创建 BFC
+
+BFC：块级格式化上下文。是一共独立的渲染区域，使其内部布局不受外部元素印象，用于解决清除浮动、边距重叠等常见布局问题。
+
+创建 BFC 的方法：
+
+- `float` 为 `left` 或 `right`
+- `position` 为 `absolute` 或 `fixed`
+- `display` 为 `inline-block`、`flow-root`。内部生成一个 BFC。
+  - `display: flow-root`：最干净无副作用的 BFC。
+
+- `overflow` 不为 `visible`
+- `flex` 或 `grid` 布局
+
+#### BFC 清除浮动
+
+问题：子元素浮动后，父容器高度为 0，背景不显示。
+
+解决方案：让父容器形成 BFC。
+
+```html
+<div class="parent">
+  <div class="float">浮动</div>
+</div>
+<style>
+.parent {
+    background: yellow;
+    /* 触发BFC */
+    overflow: hidden;
+}
+.float {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: blue;
+}
+</style>
+```
+
+#### BFC 防止垂直方向 margin 重合
+
+问题：两个相邻块级上下 margin 会取最大值，而不是相加。
+
+```html
+<div class="box">A</div>
+<div class="box">B</div>
+<style>
+.box { margin: 20px; }
+</style>
+```
+
+解决方案：将一个元素包在 BFC 中。
+
+```html
+<div class="box">A</div>
+<div class="bfc">
+  <div class="box">B</div>
+</div>
+<style>
+.box { margin: 20px; }
+.bfc { overflow: hidden; }
+</style>
+```
+
 ## 尺寸计算模式
 
 1.内部尺寸
