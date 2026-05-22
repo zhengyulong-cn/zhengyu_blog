@@ -36,7 +36,19 @@ const computerSkillsSidebar = [
     items: [
       {
         text: 'JavaScript基础入门',
-        link: '/computer-skills/现代JavaScript/JavaScript基础入门',
+        link: '/computer-skills/现代JavaScript/JavaScript编程语言-上',
+      },
+      {
+        text: 'JavaScript基础入门',
+        link: '/computer-skills/现代JavaScript/JavaScript编程语言-下',
+      },
+      {
+        text: 'JavaScript浏览器',
+        link: '/computer-skills/现代JavaScript/JavaScript浏览器',
+      },
+      {
+        text: '浏览器事件使用汇总',
+        link: '/computer-skills/现代JavaScript/浏览器事件使用汇总',
       },
     ]
   },

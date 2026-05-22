@@ -12,7 +12,7 @@ export default defineConfig({
       { text: "首页", link: "/" },
       {
         text: "计算机技术",
-        link: "/computer-skills/HTML和CSS/HTML基础",
+        link: "/computer-skills/HTML和CSS/CSS选择器汇总",
       },
       {
         text: "社会生存",
