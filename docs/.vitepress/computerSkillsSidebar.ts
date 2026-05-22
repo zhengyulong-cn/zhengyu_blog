@@ -5,8 +5,28 @@ const computerSkillsSidebar = [
     collapsed: true,
     items: [
       {
-        text: 'HTML基础',
-        link: '/computer-skills/HTML和CSS/HTML基础',
+        text: 'CSS选择器汇总',
+        link: '/computer-skills/HTML和CSS/CSS选择器汇总',
+      },
+      {
+        text: 'CSS-position关键字',
+        link: '/computer-skills/HTML和CSS/CSS-position关键字',
+      },
+      {
+        text: 'CSS-flex布局',
+        link: '/computer-skills/HTML和CSS/CSS-flex布局',
+      },
+      {
+        text: 'CSS-grid布局',
+        link: '/computer-skills/HTML和CSS/CSS-grid布局',
+      },
+      {
+        text: 'CSS尺寸体系',
+        link: '/computer-skills/HTML和CSS/CSS尺寸体系',
+      },
+      {
+        text: 'CSS布局实例',
+        link: '/computer-skills/HTML和CSS/CSS布局实例',
       },
     ]
   },
