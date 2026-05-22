@@ -7,6 +7,9 @@ hero:
   text: 纸上得来终觉浅，绝知此事要躬行
   tagline: 筝语的个人博客，包括投机交易、社会生存总结等
   actions:
+    - theme: alt
+      text: 计算机技术
+      link: /computer-skills/HTML和CSS/CSS选择器汇总
     - theme: brand
       text: 交易系统
       link: /trading-system/期货短线交易系统v4版

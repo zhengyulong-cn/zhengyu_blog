@@ -2,7 +2,7 @@
 const computerSkillsSidebar = [
   {
     text: 'HTML和CSS',
-    collapsed: true,
+    collapsed: false,
     items: [
       {
         text: 'CSS选择器汇总',
@@ -32,7 +32,7 @@ const computerSkillsSidebar = [
   },
   {
     text: '现代JavaScript',
-    collapsed: true,
+    collapsed: false,
     items: [
       {
         text: 'JavaScript编程语言-上',
@@ -90,7 +90,7 @@ const computerSkillsSidebar = [
   },
   {
     text: 'Vue3全家桶',
-    collapsed: true,
+    collapsed: false,
     items: [
       {
         text: 'Vue3官方教程',
@@ -100,7 +100,7 @@ const computerSkillsSidebar = [
   },
   {
     text: '容器和服务',
-    collapsed: true,
+    collapsed: false,
     items: [
       {
         text: 'Docker尚硅谷速通',

@@ -1,17 +1,25 @@
-# CSS-Flex布局
-## Flex容器
+<script setup>
+import FlexLayoutPanel from './FlexLayoutPanel.vue'
+</script>
+
+# CSS-Flex 布局
+## 交互式 Flex 演示
+
+<FlexLayoutPanel />
+
+## Flex 容器
 ![](image/1662518755447-6f1023d7-8c9d-4cac-87c4-2d09d15f66b9.png)
 
-容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点)叫做`main start`，结束位置叫做`main end`；交叉轴的开始位置叫做`cross start`，结束位置叫做`cross end`。
+容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点)叫做 `main start`，结束位置叫做 `main end`；交叉轴的开始位置叫做 `cross start`，结束位置叫做 `cross end`。
 
-项目默认沿主轴排列。单个项目占据的主轴空间叫做`main size`，占据的交叉轴空间叫做`cross size`。
+项目默认沿主轴排列。单个项目占据的主轴空间叫做 `main size`，占据的交叉轴空间叫做 `cross size`。
 
 ## 属性列举
-> 容器属性是写在盒子的CSS中，而项目属性是写在盒子内部节点的CSS中。
+> 容器属性是写在盒子的 CSS 中，而项目属性是写在盒子内部节点的 CSS 中。
 
 容器属性：
 
-- flex-direction：Flex的方向
+- flex-direction：Flex 的方向
    - row（默认）：主轴为水平方向，起点在左端。
    - row-reverse：主轴为水平方向，起点在右端。
    - column：主轴为垂直方向，起点在上沿。
@@ -26,9 +34,9 @@
    - flex-end：主轴结束位置对齐
    - center：居中
    - space-between：均匀排列每个元素，首个元素放置于起点，末尾元素放置于终点，每两个元素距离相等。
-   - space-evenly：均匀排列每个元素，每两个元素距离相等。和space-between相比少了首尾元素的位置限制。
-   - space-around：均匀排列每个元素，每个元素周围分配相同的空间。下图中01和02的间距是01左侧间距的2倍。
-- align-content：定义在**多条交叉轴**的对齐方式
+   - space-evenly：均匀排列每个元素，每两个元素距离相等。和 space-between 相比少了首尾元素的位置限制。
+   - space-around：均匀排列每个元素，每个元素周围分配相同的空间。下图中 01 和 02 的间距是 01 左侧间距的 2 倍。
+- align-content：定义在 **多条交叉轴** 的对齐方式
    - stretch
    - flex-start
    - flex-end
@@ -42,6 +50,11 @@
    - flex-end
    - center
 
+> [!CAUTION]
+> 当 `flex-wrap` 为 `nowrap` 时，`align-content` 失效，`align-items` 生效；
+>
+> 当 `flex-wrap` 为 `wrap` 或 `wrap-reverse` 时，`align-content` 生效，`align-items` 失效。
+
 项目属性：
 
 - align-self：设置该项目在交叉轴方向按照指定方式排列
@@ -50,14 +63,14 @@
    - flex-end
    - center
 - order
-- flex-grow和flex-shrink
+- flex-grow 和 flex-shrink
 - flex-basis
    - 确定值
    - auto
 ## 容器属性
 ### flex-drection
 
-- flex-direction：Flex的方向
+- flex-direction：Flex 的方向
    - row（默认）：主轴为水平方向，起点在左端。
    - row-reverse：主轴为水平方向，起点在右端。
    - column：主轴为垂直方向，起点在上沿。
@@ -84,7 +97,7 @@ wrap-reverse：
 ![](image/1662519036204-49bd398c-852b-4ae2-a0ea-e98cb028c241.png)
 
 ### justify-content
-> flex-start和start字段都是可以的，flex-start是早期的Flexbox标准（Flexbox specification），W3C正尝试建立盒子对齐标准（Box Alignment specification），start将被用于取代flex-start。
+> flex-start 和 start 字段都是可以的，flex-start 是早期的 Flexbox 标准（Flexbox specification），W3C 正尝试建立盒子对齐标准（Box Alignment specification），start 将被用于取代 flex-start。
 
 - justify-content：定义在主轴上的对齐方式
    - stretch：均匀排列每个元素，非定宽高元素会被拉伸以适应容器的大小。
@@ -92,26 +105,26 @@ wrap-reverse：
    - flex-end：主轴结束位置对齐
    - center：居中
    - space-between：均匀排列每个元素，首个元素放置于起点，末尾元素放置于终点，每两个元素距离相等。
-   - space-evenly：均匀排列每个元素，每两个元素距离相等。和space-between相比少了首尾元素的位置限制。
-   - space-around：均匀排列每个元素，每个元素周围分配相同的空间。下图中01和02的间距是01左侧间距的2倍。
+   - space-evenly：均匀排列每个元素，每两个元素距离相等。和 space-between 相比少了首尾元素的位置限制。
+   - space-around：均匀排列每个元素，每个元素周围分配相同的空间。下图中 01 和 02 的间距是 01 左侧间距的 2 倍。
 
 ![justify-content.png](image/1662520538911-0c3527b9-4876-445a-b4d7-aec8eb7863d0.png)
 ### align-content
-> flex布局是一维布局，在主轴上是排列元素的，排列的元素可以折行，因此flex只有一条主轴，但可以存在多条交叉轴。
-> **align-content生效的条件是必须要有多行轴线，因此只有当flex-wrap不为nowrap时候才会生效。**
+> flex 布局是一维布局，在主轴上是排列元素的，排列的元素可以折行，因此 flex 只有一条主轴，但可以存在多条交叉轴。
+> **align-content 生效的条件是必须要有多行轴线，因此只有当 flex-wrap 不为 nowrap 时候才会生效。**
 
-- align-content：定义在**多条交叉轴**的对齐方式
+- align-content：定义在 **多条交叉轴** 的对齐方式
    - stretch：均匀排列每个元素，非定宽高元素会被拉伸以适应容器的大小。
    - flex-start：交叉轴起止位置对齐
    - flex-end：交叉轴结束位置对齐
    - center：居中
    - space-between：均匀排列每个元素，首个元素放置于起点，末尾元素放置于终点，每两个元素距离相等。
-   - space-evenly：均匀排列每个元素，每两个元素距离相等。和space-between相比少了首尾元素的位置限制。
-   - space-around：均匀排列每个元素，每个元素周围分配相同的空间。下图中01和02的间距是01左侧间距的2倍。
+   - space-evenly：均匀排列每个元素，每两个元素距离相等。和 space-between 相比少了首尾元素的位置限制。
+   - space-around：均匀排列每个元素，每个元素周围分配相同的空间。下图中 01 和 02 的间距是 01 左侧间距的 2 倍。
 
 ![align-content.png](image/1662522744952-32cb1765-78a2-4727-844c-1905dd044f34.png)
 ### align-items
-> `align-content`生效时候，该属性不生效
+> `align-content` 生效时候，该属性不生效
 
 - align-items：对所有子项目在交叉轴方向按照指定方式排列
    - stretch
@@ -120,7 +133,7 @@ wrap-reverse：
    - center
    - baseline：项目的第一行文字的基线对齐
 
-baseline属性：
+baseline 属性：
 ```html
 <div class="flex-box">
     <div class="box1">纸上得来终觉浅，绝知此事要躬行</div>
@@ -168,11 +181,11 @@ baseline属性：
 
 值得注意的是，该属性并不是指交叉轴的对齐方式，而是指子项目在交叉轴上的对齐方式。
 
-当flex-wrap为nowrap时候，align-content是不生效的，这时候只有一条交叉轴。这时候用align-items实现交叉轴上的对齐也是可以的。
+当 flex-wrap 为 nowrap 时候，align-content 是不生效的，这时候只有一条交叉轴。这时候用 align-items 实现交叉轴上的对齐也是可以的。
 
 比如要实现盒子的水平垂直方向居中，有两种方式：
 
-1. 使用wrap+align-content实现
+1. 使用 wrap+align-content 实现
 ```html
 <div class="flex-box">
     <div class="box-item">01</div>
@@ -198,7 +211,7 @@ baseline属性：
 }
 ```
 
-2. nowrap情况下使用align-items居中
+2. nowrap 情况下使用 align-items 居中
 ```css
 .flex-box {
     height: 320px;
@@ -212,7 +225,11 @@ baseline属性：
 ```
 ## 项目属性
 ### align-self
-> 当`align-content`生效的时候，`align-self`和`align-items`是不生效的。
+> [!CAUTION]
+>
+> 当当 `flex-wrap` 为 `wrap` 或 `wrap-reverse` 时， `align-content` 生效。此时 `align-self` 是不生效的。
+>
+> 就是说 `flex-wrap` 为 `nowrap` 时候，`align-items` 和 `align-self` 才会生效。
 
 - align-self：设置该项目在交叉轴方向按照指定方式排列
    - stretch
@@ -266,7 +283,7 @@ baseline属性：
 flex：none | <' flex-grow '> <' flex-shrink >'? || <' flex-basis '>
 ```
 ### order
-规定弹性容器中的可伸缩项目在布局时的顺序。<br />order默认为0，可以为负数。越小越靠近主轴开始地方。
+规定弹性容器中的可伸缩项目在布局时的顺序。<br />order 默认为 0，可以为负数。越小越靠近主轴开始地方。
 ```html
 <div class="flex-box">
     <div class="box-item" style="order: 2;">01</div>
@@ -295,10 +312,10 @@ flex：none | <' flex-grow '> <' flex-shrink >'? || <' flex-basis '>
 }
 ```
 ![order.png](image/1662528073617-e0caccab-b841-416a-8879-59b1c38444a7.png)
-### flex-grow和flex-shrink
+### flex-grow 和 flex-shrink
 ![image.png](image/1662528196851-2e1c0cbd-f6dc-48c4-8a1d-a35184fddf63.png)
 ### flex-basis
-指定了 flex 元素在主轴方向上的初始大小。
+指定了 flex 元素在主轴方向上的初始大小，然后 `flex-grow` 和 `flex-shrink` 再基于这个基础进行伸缩。
 ```html
 <div class="flex-box">
     <div class="box-item">01</div>
