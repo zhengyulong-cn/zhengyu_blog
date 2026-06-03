@@ -482,6 +482,14 @@ https://itick.io/
 
 密码：lzy523024
 
+## 奇货可查
+
+https://x.qhkch.com/
+
+账户：13636168597
+
+密码：lzy123456789
+
 ## X
 
 账户：@zhengyu_1999
@@ -496,3 +504,8 @@ https://itick.io/
 
 密码：Lzy523024@
 
+## Rockstar
+
+邮箱：zhengyulong.cn@outlook.com
+
+密码：Lzy523024
