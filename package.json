@@ -2,6 +2,7 @@
   "name": "zhengyu-trade",
   "description": "筝语的交易世界",
   "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
     "medium-zoom": "^1.1.0",
     "vitepress": "^2.0.0-alpha.15"
   },

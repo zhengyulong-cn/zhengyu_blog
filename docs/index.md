@@ -8,6 +8,9 @@ hero:
   tagline: 筝语的个人博客，包括投机交易、社会生存总结等
   actions:
     - theme: alt
+      text: 理论学习
+      link: /theory-study/数学分析
+    - theme: alt
       text: 计算机技术
       link: /computer-skills/HTML和CSS/CSS选择器汇总
     - theme: brand
@@ -16,11 +19,12 @@ hero:
 
 
 features:
+  - title: 理论学习
+    details: 数学、物理、经济学、金融学学习
   - title: 计算机技术
     details: 前端、后端
   - title: 投机交易
     details: 股票、期货、加密货币等投机市场技术分析、基本面分析。
   - title: 社会生存
-    details: 在这个社会中生存必备的技能。
+    details: 在这个社会中生存必备的技能
 ---
-
