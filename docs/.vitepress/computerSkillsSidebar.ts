@@ -108,6 +108,16 @@ const computerSkillsSidebar = [
       },
     ]
   },
+  {
+    text: '面试',
+    collapsed: false,
+    items: [
+      {
+        text: 'HTML和CSS面试题',
+        link: '/computer-skills/面试/HTML和CSS面试题',
+      },
+    ]
+  }
 ]
 
 export default computerSkillsSidebar
