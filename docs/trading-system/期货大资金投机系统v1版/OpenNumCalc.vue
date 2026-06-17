@@ -18,7 +18,7 @@ const varieties: VarietyConfig[] = [
   { name: '焦炭', prefix: 'j', minMove: 0.5, tickValue: 50, referenceLots: 3, note: '实盘会略微降手数' },
   { name: '铁矿石', prefix: 'i', minMove: 0.5, tickValue: 50, referenceLots: 10 },
   { name: '烧碱', prefix: 'SH', minMove: 1, tickValue: 30, referenceLots: 16 },
-  { name: '甲醇', prefix: 'MA', minMove: 1, tickValue: 10, referenceLots: 30 },
+  { name: '甲醇', prefix: 'MA', minMove: 1, tickValue: 10, referenceLots: 35 },
   { name: '乙二醇', prefix: 'eg', minMove: 1, tickValue: 10, referenceLots: 20 },
   { name: '苯乙烯', prefix: 'eb', minMove: 1, tickValue: 5, referenceLots: 22 },
   { name: 'PTA', prefix: 'TA', minMove: 2, tickValue: 10, referenceLots: 30 },
@@ -28,14 +28,16 @@ const varieties: VarietyConfig[] = [
   { name: '橡胶', prefix: 'ru', minMove: 5, tickValue: 50, referenceLots: 5 },
   { name: '菜油', prefix: 'OI', minMove: 1, tickValue: 10, referenceLots: 10 },
   { name: '棕榈油', prefix: 'p', minMove: 2, tickValue: 20, referenceLots: 10 },
+  { name: '沪银', prefix: 'ag', minMove: 1, tickValue: 15, referenceLots: 3 },
   { name: '沪镍', prefix: 'ni', minMove: 10, tickValue: 10, referenceLots: 6 },
   { name: '沪锡', prefix: 'sn', minMove: 10, tickValue: 10, referenceLots: 2 },
   { name: '鸡蛋', prefix: 'jd', minMove: 1, tickValue: 10, referenceLots: 22 },
   { name: '多晶硅', prefix: 'ps', minMove: 5, tickValue: 15, referenceLots: 4, note: '实盘会略微降手数' },
+  { name: '碳酸锂', prefix: 'lc', minMove: 20, tickValue: 20, referenceLots: 5, note: '碳酸锂最小限定为5手' },
 ]
 
 const selectedName = ref(varieties[0].name)
-const currentPrice = ref<number | null>(1200)
+const currentPrice = ref<number | null>(1352)
 
 const selectedVariety = computed(
   () => varieties.find((item) => item.name === selectedName.value) ?? varieties[0],
