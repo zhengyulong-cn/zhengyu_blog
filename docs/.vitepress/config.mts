@@ -9,6 +9,7 @@ export default defineConfig({
   title: "筝语的博客",
   description: "纸上得来终觉浅，绝知此事要躬行",
   themeConfig: {
+    logo: './butterfly.png',
     nav: [
       { text: "首页", link: "/" },
       { text: "理论学习", link: "/theory-study/数学分析" },
