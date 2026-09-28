@@ -2,6 +2,7 @@ import { defineConfig } from "vitepress";
 import tradingSystemSidebar from "./tradingSystemSidebar";
 import socialNormsSidebar from "./socialNormsSidebar";
 import computerSkillsSidebar from "./computerSkillsSidebar";
+import zhchessSidebar from "./zhchessSidebar";
 import theoryStudySidebar from "./theoryStudySidebar";
 
 // https://vitepress.dev/reference/site-config
@@ -18,14 +19,19 @@ export default defineConfig({
         link: "/computer-skills/HTML和CSS/CSS选择器汇总",
       },
       {
+        text: "象棋",
+        link: "/zh-chess/基础杀法",
+      },
+      {
         text: "社会生存",
         link: "/social-norms/社会与人性",
       },
-      { text: "交易系统", link: "/trading-system/期货短线交易系统v4版" }
+      { text: "交易系统", link: "/trading-system/趋势交易系统v7版" }
     ],
     sidebar: {
       "/theory-study": theoryStudySidebar,
       "/computer-skills": computerSkillsSidebar,
+      "/zh-chess": zhchessSidebar,
       "/trading-system/": tradingSystemSidebar,
       "/social-norms": socialNormsSidebar,
     },

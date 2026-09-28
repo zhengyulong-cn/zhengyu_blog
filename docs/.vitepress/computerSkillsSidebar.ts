@@ -75,10 +75,6 @@ const computerSkillsSidebar = [
         link: '/computer-skills/现代JavaScript/正则表达式入门',
       },
       {
-        text: '正则表达式入门',
-        link: '/computer-skills/现代JavaScript/正则表达式入门',
-      },
-      {
         text: '深入理解JS事件循环机制',
         link: '/computer-skills/现代JavaScript/深入理解JS事件循环机制',
       },

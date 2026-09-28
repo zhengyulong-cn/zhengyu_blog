@@ -4,7 +4,7 @@ const theoryStudySidebar = [
     text: '数学和物理',
     collapsed: false,
     items: [
-      { text: '数学分析', link: '/theory-study/数学分析' },
+      { text: '政治经济学', link: '/theory-study/政治经济学/微观经济学' },
     ]
   }
 ]

@@ -2,7 +2,7 @@
 import OpenNumCalc from './OpenNumCalc.vue'
 </script>
 
-# 期货大资金投机系统 v1 版
+# 期货大资金投机系统 v6 版
 
 ## 图形学定义
 
