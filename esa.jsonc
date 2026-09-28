@@ -1,0 +1,9 @@
+{
+  "name": "zhengyublog",
+  "installCommand": "npm install",
+  "buildCommand": "npm run docs:build",
+  "assets": {
+    "directory": ".vitepress/dist",
+    "notFoundStrategy": "404Page"
+  }
+}

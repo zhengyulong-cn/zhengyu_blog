@@ -15,7 +15,7 @@ hero:
       link: /computer-skills/HTML和CSS/CSS选择器汇总
     - theme: brand
       text: 交易系统
-      link: /trading-system/期货短线交易系统v4版
+      link: /trading-system/期货大资金投机系统v1版
 
 
 features:
@@ -28,3 +28,4 @@ features:
   - title: 社会生存
     details: 在这个社会中生存必备的技能
 ---
+

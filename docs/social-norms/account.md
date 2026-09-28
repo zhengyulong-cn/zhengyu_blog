@@ -6,7 +6,7 @@
 - chinajonnylong@163.com
 - zhengyulong.cn@outlook.com
 - zhengyulong.cn@gmail.com
-- zhengyulong@proton.me（OpenAI专用）
+- zhengyulong@proton.me（OpenAI 专用）
 - zhengyucodex1@proton.me
 
 密码都是：lzy523024
@@ -25,13 +25,19 @@
 
 密码：lzy523024@@
 
+## Quora
+
+邮箱：`zhengyulong.cn@outlook.com`
+
+密码：Lzy523024@
+
 ## Docker
 
 邮箱：`zhengyulong.cn@outlook.com`
 
 密码：lzy523024
 
-## Typora激活码
+## Typora 激活码
 
 邮箱：`chinajonnylong@163.com`
 
@@ -47,7 +53,7 @@
 
 手机号：13636168597
 
-账号ID：1702911494713155
+账号 ID：1702911494713155
 
 密码：lzy523024
 
@@ -248,7 +254,7 @@ tb601012533
 
 密码：`lzy523024`
 
-## Fotor懒设计
+## Fotor 懒设计
 
 邮箱：`sylzy66sina@163.com`
 
@@ -336,7 +342,7 @@ SYLZY66sina
 
 ## OpenAI
 
-### 账户1（主账户）
+### 账户 1（主账户）
 
 账号：zhengyulong@proton.me
 
@@ -344,7 +350,7 @@ SYLZY66sina
 
 密码：lzy523024
 
-### 账户2
+### 账户 2
 
 账号：zhengyucodex1@proton.me
 
@@ -362,7 +368,7 @@ SYLZY66sina
 
 密码：`lzy523024`
 
-## FlyintPro飞数（机场）
+## FlyintPro 飞数（机场）
 
 邮箱：`sylzy66sina@163.com`
 
@@ -440,7 +446,7 @@ SYLZY66sina
 
 密码：Lzy523024@
 
-## Youquant量化
+## Youquant 量化
 
 https://www.youquant.com/
 
@@ -490,6 +496,14 @@ https://x.qhkch.com/
 
 密码：lzy123456789
 
+## 观潮
+
+官网：https://guanchaotv.com/app/
+
+账户：13636168597
+
+密码：lzy523024@
+
 ## X
 
 账户：@zhengyu_1999
@@ -509,3 +523,19 @@ https://x.qhkch.com/
 邮箱：zhengyulong.cn@outlook.com
 
 密码：Lzy523024
+
+## 悠兔 VPN
+
+网站链接：https://888.youtu7.shop/dashboard
+
+账户：zhengyulong.cn@outlook.com
+
+密码：lzy523024
+
+## Boostnet VPN
+
+网站链接：https://777.boostnet1.com/
+
+账户：zhengyulong.cn@outlook.com
+
+密码：lzy523024
