@@ -15,7 +15,7 @@ hero:
       link: /computer-skills/HTML和CSS/CSS选择器汇总
     - theme: brand
       text: 交易系统
-      link: /trading-system/期货大资金投机系统v1版
+      link: /trading-system/趋势交易系统v7版
 
 
 features:

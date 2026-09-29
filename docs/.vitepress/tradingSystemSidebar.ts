@@ -1,5 +1,11 @@
 const tradingSystemSidebar = [
   {
+    text: '交易理念',
+    items: [
+      { text: '⭐交易系统的建立过程', link: '/trading-system/交易理念/交易系统的建立过程', collapsed: true },
+    ]
+  },
+  {
     text: '交易系统',
     items: [
       { text: '期货短线交易系统v2版', link: '/trading-system/期货短线交易系统v2版', collapsed: true },
