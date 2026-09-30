@@ -6,6 +6,7 @@ const tradingSystemSidebar = [
       { text: '⭐交易的逻辑框架', link: '/trading-system/交易理念/交易的逻辑框架', collapsed: true },
       { text: '⭐交易的确定和不确定性', link: '/trading-system/交易理念/交易的确定和不确定性', collapsed: true },
       { text: '⭐可盈利系统的规则', link: '/trading-system/交易理念/可盈利系统的规则', collapsed: true },
+      { text: '⭐交易的级别问题', link: '/trading-system/交易理念/交易的级别问题', collapsed: true },
       { text: '⭐多周期框架', link: '/trading-system/交易理念/多周期框架', collapsed: true },
       { text: '⭐多周期框架2', link: '/trading-system/交易理念/多周期框架2', collapsed: true },
       { text: '⭐逆势交易的缺陷', link: '/trading-system/交易理念/逆势交易的缺陷', collapsed: true },
