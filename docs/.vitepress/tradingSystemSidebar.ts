@@ -20,6 +20,7 @@ const tradingSystemSidebar = [
       { text: '⭐有效的W底和M顶', link: '/trading-system/交易理念/有效的W底和M顶' },
       { text: '⭐新闻与消息', link: '/trading-system/交易理念/新闻与消息' },
       { text: '⭐全品种覆盖策略', link: '/trading-system/交易理念/全品种覆盖策略' },
+      { text: '⭐日内交易', link: '/trading-system/交易理念/日内交易' },
     ]
   },
   {
@@ -37,6 +38,8 @@ const tradingSystemSidebar = [
     collapsed: true,
     items: [
       { text: '20261013', link: '/trading-system/交易日志/20261013' },
+      { text: '20261014', link: '/trading-system/交易日志/20261014' },
+      { text: '20261015', link: '/trading-system/交易日志/20261015' },
     ]
   }
 ]
