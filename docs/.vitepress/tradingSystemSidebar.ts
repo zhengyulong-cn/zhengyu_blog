@@ -40,6 +40,7 @@ const tradingSystemSidebar = [
       { text: '20261013', link: '/trading-system/交易日志/20261013' },
       { text: '20261014', link: '/trading-system/交易日志/20261014' },
       { text: '20261015', link: '/trading-system/交易日志/20261015' },
+      { text: '20261016', link: '/trading-system/交易日志/20261016' },
     ]
   }
 ]
