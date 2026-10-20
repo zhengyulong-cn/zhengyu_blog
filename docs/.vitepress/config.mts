@@ -13,15 +13,11 @@ export default defineConfig({
     logo: './butterfly.png',
     nav: [
       { text: "首页", link: "/" },
-      // { text: "理论学习", link: "/theory-study/数学分析" },
+      { text: "理论学习", link: "/theory-study/政治经济学/微观经济学" },
       {
         text: "计算机技术",
         link: "/computer-skills/HTML和CSS/CSS选择器汇总",
       },
-      // {
-      //   text: "象棋",
-      //   link: "/zh-chess/基础杀法",
-      // },
       // {
       //   text: "社会生存",
       //   link: "/social-norms/社会与人性",

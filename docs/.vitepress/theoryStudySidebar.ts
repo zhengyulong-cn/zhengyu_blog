@@ -1,4 +1,4 @@
-// 人情世故
+// 理论学习
 const theoryStudySidebar = [
   {
     text: '数学和物理',

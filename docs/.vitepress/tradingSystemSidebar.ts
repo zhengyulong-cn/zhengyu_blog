@@ -21,6 +21,8 @@ const tradingSystemSidebar = [
       { text: '⭐新闻与消息', link: '/trading-system/交易理念/新闻与消息' },
       { text: '⭐全品种覆盖策略', link: '/trading-system/交易理念/全品种覆盖策略' },
       { text: '⭐日内交易', link: '/trading-system/交易理念/日内交易' },
+      { text: '期货逼仓', link: '/trading-system/交易理念/期货逼仓' },
+      { text: '⭐小资金做大', link: '/trading-system/交易理念/小资金做大' },
     ]
   },
   {
@@ -41,6 +43,7 @@ const tradingSystemSidebar = [
       { text: '20261014', link: '/trading-system/交易日志/20261014' },
       { text: '20261015', link: '/trading-system/交易日志/20261015' },
       { text: '20261016', link: '/trading-system/交易日志/20261016' },
+      { text: '20261020', link: '/trading-system/交易日志/20261020' },
     ]
   }
 ]
