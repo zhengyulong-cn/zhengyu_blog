@@ -1,6 +1,7 @@
 const tradingSystemSidebar = [
   {
     text: '交易理念',
+    collapsed: true,
     items: [
       { text: '⭐交易系统的建立过程', link: '/trading-system/交易理念/交易系统的建立过程' },
       { text: '⭐交易的逻辑框架', link: '/trading-system/交易理念/交易的逻辑框架' },
@@ -27,6 +28,7 @@ const tradingSystemSidebar = [
   },
   {
     text: '交易系统',
+    collapsed: false,
     items: [
       { text: '期货短线交易系统v2版', link: '/trading-system/期货短线交易系统v2版' },
       { text: '期货短线交易系统v3版', link: '/trading-system/期货短线交易系统v3版' },
@@ -44,6 +46,8 @@ const tradingSystemSidebar = [
       { text: '20261015', link: '/trading-system/交易日志/20261015' },
       { text: '20261016', link: '/trading-system/交易日志/20261016' },
       { text: '20261020', link: '/trading-system/交易日志/20261020' },
+      { text: '20261021', link: '/trading-system/交易日志/20261021' },
+      { text: '20261023', link: '/trading-system/交易日志/20261023' },
     ]
   }
 ]
