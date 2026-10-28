@@ -38,6 +38,13 @@ const tradingSystemSidebar = [
     ]
   },
   {
+    text: '交易反思',
+    collapsed: true,
+    items: [
+      { text: '多周期与胜率', link: '/trading-system/交易反思/多周期与胜率' },
+    ]
+  },
+  {
     text: '交易日志',
     collapsed: true,
     items: [
@@ -49,6 +56,7 @@ const tradingSystemSidebar = [
       { text: '20261021', link: '/trading-system/交易日志/20261021' },
       { text: '20261023', link: '/trading-system/交易日志/20261023' },
       { text: '20261026', link: '/trading-system/交易日志/20261026' },
+      { text: '20261028', link: '/trading-system/交易日志/20261028' },
     ]
   }
 ]
