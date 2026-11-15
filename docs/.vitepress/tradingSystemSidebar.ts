@@ -3,6 +3,7 @@ const tradingSystemSidebar = [
     text: '交易理念',
     collapsed: true,
     items: [
+      { text: '成功才是成功之母', link: '/trading-system/交易理念/成功才是成功之母' },
       { text: '⭐交易系统的建立过程', link: '/trading-system/交易理念/交易系统的建立过程' },
       { text: '⭐交易的逻辑框架', link: '/trading-system/交易理念/交易的逻辑框架' },
       { text: '⭐交易的确定和不确定性', link: '/trading-system/交易理念/交易的确定和不确定性' },
@@ -22,8 +23,10 @@ const tradingSystemSidebar = [
       { text: '⭐新闻与消息', link: '/trading-system/交易理念/新闻与消息' },
       { text: '⭐全品种覆盖策略', link: '/trading-system/交易理念/全品种覆盖策略' },
       { text: '⭐日内交易', link: '/trading-system/交易理念/日内交易' },
+      { text: '⭐成交量的逻辑', link: '/trading-system/交易理念/成交量的逻辑' },
       { text: '期货逼仓', link: '/trading-system/交易理念/期货逼仓' },
       { text: '⭐小资金做大', link: '/trading-system/交易理念/小资金做大' },
+      { text: '⭐看对方向还亏钱', link: '/trading-system/交易理念/看对方向还亏钱' },
     ]
   },
   {
@@ -41,6 +44,7 @@ const tradingSystemSidebar = [
     text: '交易反思',
     collapsed: true,
     items: [
+      { text: '回调入场结构所面临的问题', link: '/trading-system/交易反思/回调入场结构所面临的问题' },
       { text: '多周期与胜率', link: '/trading-system/交易反思/多周期与胜率' },
     ]
   },
@@ -63,6 +67,7 @@ const tradingSystemSidebar = [
       { text: '20261109', link: '/trading-system/交易日志/20261109' },
       { text: '20261110', link: '/trading-system/交易日志/20261110' },
       { text: '20261111', link: '/trading-system/交易日志/20261111' },
+      { text: '20261112', link: '/trading-system/交易日志/20261112' },
     ]
   }
 ]
