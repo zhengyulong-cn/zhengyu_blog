@@ -45,6 +45,7 @@ const tradingSystemSidebar = [
     collapsed: true,
     items: [
       { text: '回调入场结构所面临的问题', link: '/trading-system/交易反思/回调入场结构所面临的问题' },
+      { text: '借款炒期货反思', link: '/trading-system/交易反思/借款炒期货反思' },
       { text: '多周期与胜率', link: '/trading-system/交易反思/多周期与胜率' },
     ]
   },
